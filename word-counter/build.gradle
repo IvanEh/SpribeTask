@@ -1,0 +1,3 @@
+dependencies {
+    compile 'org.apache.myfaces.core:myfaces-impl:2.2.11'
+}
