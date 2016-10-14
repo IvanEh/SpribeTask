@@ -20,7 +20,8 @@ public class WordCounterTest {
     @Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
-                {WordCounterImpl.class}
+                {WordCounterImpl.class},
+                {ConcurrentWordCounter.class}
         });
     }
 
@@ -78,6 +79,7 @@ public class WordCounterTest {
         assertEquals(2, wordCounter.count("Word"));
     }
 
+    @Test
     public void count_AfterTwoPassWords() {
         wordCounter.passWords("Word");
         assertEquals(1, wordCounter.count("Word"));
