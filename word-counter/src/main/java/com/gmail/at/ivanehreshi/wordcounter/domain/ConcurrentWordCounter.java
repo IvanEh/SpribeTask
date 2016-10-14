@@ -1,8 +1,12 @@
 package com.gmail.at.ivanehreshi.wordcounter.domain;
 
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
+@ManagedBean(name="concurrentWordCounter")
+@ApplicationScoped
 public class ConcurrentWordCounter extends WordCounterImpl{
     protected final ReadWriteLock rwLock;
 

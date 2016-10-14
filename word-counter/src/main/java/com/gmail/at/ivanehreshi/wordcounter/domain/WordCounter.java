@@ -1,10 +1,11 @@
 package com.gmail.at.ivanehreshi.wordcounter.domain;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public interface WordCounter {
+public interface WordCounter extends Serializable {
     int passWord(String word);
 
     default List<Integer> passWordsAndCount(String words) {
