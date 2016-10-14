@@ -19,7 +19,7 @@ public interface WordCounter {
 
     default void passWords(String... words) {
         Arrays.stream(words)
-                     .map(this::passWord);
+                     .forEach(this::passWord);
     }
 
     default void passWords(String words) {
