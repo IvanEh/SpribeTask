@@ -3,6 +3,8 @@ package com.gmail.at.ivanehreshi.wordcounter;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import static org.junit.Assert.*;
 
@@ -10,6 +12,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 // TODO: Add test messages
+@RunWith(Parameterized.class)
 public class WordCounterTest {
     private Class<? extends WordCounter> wordCounterClass;
     private WordCounter wordCounter;
@@ -17,6 +20,7 @@ public class WordCounterTest {
     @Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
+                {WordCounterImpl.class}
         });
     }
 
