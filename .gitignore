@@ -1,0 +1,9 @@
+.gradle
+.idea
+*.*swp
+.directory
+build/
+tomcat/logs
+tomcat/temp
+tomcat/webapps
+bower_components
