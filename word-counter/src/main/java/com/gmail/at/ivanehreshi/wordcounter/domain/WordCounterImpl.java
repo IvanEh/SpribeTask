@@ -1,4 +1,4 @@
-package com.gmail.at.ivanehreshi.wordcounter;
+package com.gmail.at.ivanehreshi.wordcounter.domain;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,5 +1,8 @@
 package com.gmail.at.ivanehreshi.wordcounter;
 
+import com.gmail.at.ivanehreshi.wordcounter.domain.ConcurrentWordCounter;
+import com.gmail.at.ivanehreshi.wordcounter.domain.WordCounter;
+import com.gmail.at.ivanehreshi.wordcounter.domain.WordCounterImpl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

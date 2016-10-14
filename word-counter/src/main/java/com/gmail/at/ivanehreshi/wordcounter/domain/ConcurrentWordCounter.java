@@ -1,4 +1,4 @@
-package com.gmail.at.ivanehreshi.wordcounter;
+package com.gmail.at.ivanehreshi.wordcounter.domain;
 
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
