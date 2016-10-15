@@ -1,5 +1,7 @@
 package com.gmail.at.ivanehreshi.findopponent.domain;
 
+import java.util.List;
+
 public interface OpponentFinder {
     void addReadyPlayer(Player player);
 
@@ -9,6 +11,10 @@ public interface OpponentFinder {
         }
     }
 
-    Player findOpponent(Player player);
+    Player findOpponent(Player player) throws IllegalArgumentException;
 
+    int countReady();
+    void clearReadyPlayers();
+    int removePlayer(Player player);
+    List<Player> playersAsList();
 }
