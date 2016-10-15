@@ -1,5 +1,7 @@
 package com.gmail.at.ivanehreshi.findopponent.domain;
 
+import java.util.Objects;
+
 public class Player {
     private String name;
     private double rating;
@@ -26,5 +28,19 @@ public class Player {
 
     public void setRating(double rating) {
         this.rating = rating;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Player player = (Player) o;
+        return Double.compare(player.rating, rating) == 0 &&
+                Objects.equals(name, player.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, rating);
     }
 }
