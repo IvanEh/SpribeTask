@@ -15,6 +15,6 @@ public interface OpponentFinder {
 
     int countReady();
     void clearReadyPlayers();
-    int removePlayer(Player player);
+    boolean removePlayer(Player player);
     List<Player> playersAsList();
 }
