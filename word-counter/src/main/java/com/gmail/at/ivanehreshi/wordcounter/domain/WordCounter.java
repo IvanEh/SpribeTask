@@ -6,6 +6,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public interface WordCounter extends Serializable {
+    /**
+     * @param word is the word to count
+     * @return number of passWord(word) calls made with the given argument </br>
+     *         if <b>word</b> is <b>null</b> then returns 0
+     */
     int passWord(String word);
 
     default List<Integer> passWordsAndCount(String words) {

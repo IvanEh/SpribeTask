@@ -9,10 +9,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import static org.junit.Assert.*;
 
 import java.util.Arrays;
 import java.util.Collection;
+
+import static org.junit.Assert.assertEquals;
 
 // TODO: Add test messages
 @RunWith(Parameterized.class)
@@ -45,6 +46,18 @@ public class WordCounterTest {
     @Test
     public void count_NonExistent() {
         assertEquals(0, wordCounter.count("Word"));
+    }
+
+    @Test
+    public void count_Empty_NullArg() {
+        assertEquals(0, wordCounter.count(null));
+    }
+
+    public void count_NullArg() {
+        wordCounter.passWord(null);
+        wordCounter.passWords(null, null);
+
+        assertEquals(0, wordCounter.count(null));
     }
 
     @Test

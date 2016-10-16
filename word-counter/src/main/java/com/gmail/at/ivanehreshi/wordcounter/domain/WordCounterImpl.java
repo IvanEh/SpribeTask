@@ -12,6 +12,10 @@ public class WordCounterImpl implements WordCounter{
 
     @Override
     public int passWord(String word) {
+        if(word == null) {
+            return 0;
+        }
+
         Integer wordCount = wordsMap.getOrDefault(word, 0);
         ++wordCount;
         wordsMap.put(word, wordCount);
@@ -20,6 +24,9 @@ public class WordCounterImpl implements WordCounter{
 
     @Override
     public int count(String word) {
+        if(word == null) {
+            return 0;
+        }
         return wordsMap.getOrDefault(word, 0);
     }
 
