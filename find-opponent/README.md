@@ -1,9 +1,10 @@
 # FindOpponent
 
 - HTML frontend
+ 
  /index.html allows adding ready users
-  shows all ready users when 'Add ready player' pressed
-  Displays opponent when 'Find Opponent' pressed
+ shows all ready users when 'Add ready player' pressed
+ Displays opponent when 'Find Opponent' pressed
   
 - Spring powered __API__
  
