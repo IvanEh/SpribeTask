@@ -1,11 +1,11 @@
 # FindOpponent
 
-- html frontend
+- HTML frontend
  /index.html allows adding ready users
   shows all ready users when 'Add ready player' pressed
   Displays opponent when 'Find Opponent' pressed
   
-- Spring powered API
+- Spring powered __API__
  
  __Object format__: JSON
  
@@ -32,8 +32,8 @@
 
 # Build
 
-1. gradle :find-opponent:war
-2. war file location: /find-opponent/build/libs/
-3. push to AS or Tomcat
+1. $ gradle :find-opponent:war
+2. War file location: /find-opponent/build/libs/
+3. Deploy to AS or Tomcat
 
   
