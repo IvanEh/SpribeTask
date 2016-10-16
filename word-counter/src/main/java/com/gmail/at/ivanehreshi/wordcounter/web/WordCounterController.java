@@ -11,21 +11,20 @@ public class WordCounterController implements Serializable {
     @ManagedProperty("#{concurrentWordCounter}")
     private WordCounter wordCounter;
 
-    private String word;
+    private String testedForm;
 
     public WordCounterController() {
     }
 
-    public String count() {
-        if(word == null) {
+    public String countMsg() {
+        if(testedForm == null) {
             return "";
         }
 
-        return word + ": " + String.valueOf(wordCounter.count(word));
+        return String.format("\"%s\" passed %d times", testedForm, wordCounter.count(testedForm));
     }
 
     public void passWords(String words) {
-        System.out.println("pass(" + words + ")");
         wordCounter.passWords(words);
     }
 
@@ -37,11 +36,11 @@ public class WordCounterController implements Serializable {
         this.wordCounter = wordCounter;
     }
 
-    public String getWord() {
-        return word;
+    public String getTestedForm() {
+        return testedForm;
     }
 
-    public void setWord(String word) {
-        this.word = word;
+    public void setTestedForm(String testedForm) {
+        this.testedForm = testedForm;
     }
 }

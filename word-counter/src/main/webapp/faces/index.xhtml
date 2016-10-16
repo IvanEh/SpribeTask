@@ -12,7 +12,6 @@
 </h:head>
 <h:body>
     <c:set var="words" value="" scope="request" />
-    <c:set var="wx" value="" scope="request"/>
 
     <div class="container">
         <h:form styleClass="col-md-offset-3 col-md-6">
@@ -21,31 +20,33 @@
                 <label for="name" class="control-label">Space separated list of words</label>
                 <h:inputText styleClass="form-control" value="#{words}"/>
             </div>
-            <h:commandButton styleClass="btn btn-primary" value="Send"
+            <h:commandButton styleClass="btn btn-primary" value="Send words"
                              action="#{wordCounterController.passWords(words)}"
                             >
-                <f:ajax execute="@form f" render="words-count f"></f:ajax>
+                <f:ajax execute="@form" render="words-count"></f:ajax>
             </h:commandButton>
         </h:form>
 
-        <hr class="col-md-offset-3 col-md-6"/>
+        <div class="col-md-offset-3 col-md-6">
+            <hr/>
+        </div>
 
-        <h:form styleClass="col-md-offset-3 col-md-6" id="f">
+        <h:form styleClass="col-md-offset-3 col-md-6">
             <div class="form-group">
-                <label class="control-label">Freq</label>
-                <h:inputText styleClass="form-control" value="#{wordCounterController.word}"/>
+                <label class="control-label">Word to test</label>
+                <h:inputText styleClass="form-control" value="#{wordCounterController.testedForm}"/>
             </div>
 
             <h:commandButton styleClass="btn btn-primary"
-                             value="Update">
+                             value="Test">
                 <f:ajax execute="@form" render="words-count"></f:ajax>
             </h:commandButton>
 
         </h:form>
 
         <div class="col-md-offset-3 col-md-6">
-            Frequency: <h:outputText id="words-count"
-                                     value="#{wordCounterController.count()}"></h:outputText>
+            <h:outputText id="words-count"
+                                     value="#{wordCounterController.countMsg()}"></h:outputText>
         </div>
 
     </div>
