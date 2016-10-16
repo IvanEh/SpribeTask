@@ -11,4 +11,9 @@ allprojects {
     dependencies {
         testCompile 'junit:junit:4.11'
     }
+
+    war {
+        exclude '.bowerrc'
+        exclude 'bower.json'
+    }
 }
