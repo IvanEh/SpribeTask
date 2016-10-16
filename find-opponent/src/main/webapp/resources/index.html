@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Opponent</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <form class="col-md-offset-3 col-md-6" id="opponent-finder-form">
+        <div class="form-group">
+            <label class="control-label">Player name: </label>
+            <input type="text" class="form-control" name="player"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Rating</label>
+            <input type="text" class="form-control" name="rating"/>
+        </div>
+
+        <button type="button" id="add-ready" class="btn btn-primary">Add ready player</button>
+        <button type="button" id="find-opponent" class="btn btn-primary">Find opponent</button>
+
+        <p style="display: none" id="opponent">
+            Opponent found: <span></span>
+        </p>
+    </form>
+
+    <div  class="col-md-offset-3 col-md-6">
+        <hr/>
+    </div>
+
+    <div  class="col-md-offset-3 col-md-6" id="ready-players">
+    </div>
+
+
+</div>
+</body>
+</html>

@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Scope;
 public class RootConfig {
 
     @Bean
-    @Scope
+    @Scope("singleton")
     public OpponentFinder opponentFinder() {
         return new OpponentFinderImpl();
     }
