@@ -5,7 +5,10 @@
   shows all ready users when 'Add ready player' pressed
   Displays opponent when 'Find Opponent' pressed
   
-- api
+- Spring powered API
+ 
+ __Object format__: JSON
+ 
  + GET /api/ready-players
    lists all ready players
    
