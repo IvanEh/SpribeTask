@@ -51,6 +51,13 @@ public class OpponentFinderTest {
     }
 
     @Test
+    public void addReadyPlayer_Null() {
+        opponentFinder.addReadyPlayer(null);
+        opponentFinder.addReadyPlayers(null, null);
+        assertEquals(0, opponentFinder.countReady());
+    }
+
+    @Test
     public void addReadyPlayer_CountOne() {
         Player player = new Player("name", 1);
         opponentFinder.addReadyPlayer(player);
