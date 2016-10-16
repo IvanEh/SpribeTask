@@ -19,4 +19,4 @@ use ```ConcurrentHashMap``` instead of HashMap/Collections.synchronizedMap(Map)
 1. $ gradle build :word-counter:war
 2. War file location: word-counter/build/libs/
 3. Deploy to AS or Tomcat
- To deploy to Tomcat uncomment jsf implementation dependency in word-counter/build.gradle
+ To deploy to Tomcat uncomment jsf implementation dependency in word-counter/build.gradle 
