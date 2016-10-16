@@ -11,6 +11,11 @@ public interface OpponentFinder {
         }
     }
 
+    /**
+     * Find a ready player with the closest rating to the current player. Both players
+     * will be removed from the ready players list
+     * @throws IllegalArgumentException when player is not a ready player
+     */
     Player findOpponent(Player player) throws IllegalArgumentException;
 
     int countReady();

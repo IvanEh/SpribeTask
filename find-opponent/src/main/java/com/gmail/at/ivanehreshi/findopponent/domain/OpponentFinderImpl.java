@@ -3,6 +3,11 @@ package com.gmail.at.ivanehreshi.findopponent.domain;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * OpponentFinderImpl uses multi set (TreeMap<T, List<T>) to be able
+ * to contain multiple Player instance with equal fields so equals method will
+ * return true for them
+ */
 public class OpponentFinderImpl implements OpponentFinder {
     private TreeMap<Player, List<Player>> readyPlayers;  // Actually MultiSet
     private int size;
