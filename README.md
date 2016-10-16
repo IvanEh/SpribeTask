@@ -1,7 +1,7 @@
 # README links
 
 - [find-opponent/README](find-opponent/README.md)
-- [word-counter/README](word-counter/README.MD)
+- [word-counter/README](word-counter/README.md)
 
 # Building application
 
