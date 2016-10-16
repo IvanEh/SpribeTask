@@ -5,9 +5,14 @@ import javax.faces.bean.ManagedBean;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
+
+/**
+ * Concurrent wrapper around WordCounterImpl
+ */
 @ManagedBean(name="concurrentWordCounter")
 @ApplicationScoped
 public class ConcurrentWordCounter extends WordCounterImpl{
+    // A better implementation would use java.util.concurrent.ConcurrentHashMap
     protected final ReadWriteLock rwLock;
 
     public ConcurrentWordCounter() {

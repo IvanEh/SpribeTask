@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class WordCounterImpl implements WordCounter{
+    // A better implementation would use java.util.concurrent.ConcurrentHashMap
     private Map<String, Integer> wordsMap;
 
     public WordCounterImpl() {
